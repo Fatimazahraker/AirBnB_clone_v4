@@ -1,17 +1,13 @@
 $(document).ready(function() {
   let amenity_check = [];
-  $('input:checkbox').on('change', function(){
+  $('input:checkbox').on('change', function() {
     const id = $(this).data('id');
     const name = $(this).data('name');
-    if($(this).is(':checked')){
-      amenity_check.push(id) = name;
+    if($(this).is(':checked')) {
+      amenity_check[id] = name;
     } else {
-      const index = amenity_check.indexOf(id);
-      if (index > -1) {
-        amenity_check.splice(index, 1);
-      }
+      delete amenity_check[id];
     }
-
-    $('h4').text('Amenities: ' + amenity_check.join(', '));
+    $('.amenities h4').text(Object.values(amenity_check).join(', '));
   });
-  });
+});
