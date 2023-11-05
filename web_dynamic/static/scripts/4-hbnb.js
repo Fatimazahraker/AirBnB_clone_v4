@@ -59,23 +59,16 @@ $(document).ready(function() {
             '<h2>' + place.name + '</h2>' +
             '<div class="price_by_night">' + place.price_by_night + '</div>' +
             '</div>' +
-            '<div class="information">' +
+            '<div class "information">' +
             '<div class="max_guest"><br />' + place.max_guest + ' Guests</div>' +
             '<div class="number_rooms"><br />' + place.number_rooms + ' Bedrooms</div>' +
             '<div class="number_bathrooms"><br />' + place.number_bathrooms + ' Bathroom</div>' +
             '<div class="description">' + place.description + '</div>' +
-            '</div>' +
             '</article>'
           );
-	  // Log the place data to the console
-          console.log('Place:', place);
         });
-      },
-      error: function (error) {
-        // Handle errors here
-        console.error('Error:', error);
-        // You can provide feedback to the user or perform error-specific actions
       }
     });
   };
 });
+
