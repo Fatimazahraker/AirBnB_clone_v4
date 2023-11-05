@@ -12,8 +12,12 @@ header .logo {
 header #api_status {
     height: 40px;
     width: 40px;
-    background-color: #cccccc;
+    background-color: #ff545f;
     border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    right: 30px;
+    transform: translateY(-50%);
     margin: auto;
 }
 #api_status.available {
