@@ -22,21 +22,6 @@ $(document).ready(function() {
       $('.amenities h4').text(Object.values(amenity_check).join(', '));
     });
 
-    // Add a click event handler to the button with id "searchButton"
-    $('#searchButton').click(function() {
-      // Create an array to store the selected amenities
-      const selectedAmenities = [];
-
-      // Get all the checkboxes for amenities
-      $('input:checkbox').each(function() {
-        if ($(this).is(':checked')) {
-          selectedAmenities.push($(this).data('id'));
-        }
-      });
-
-      // Call the getPlaces function with the selected amenities as data
-      getPlaces({ amenities: selectedAmenities });
-    });
 
     // Call the getPlaces function on page load without data to load all places
     getPlaces();
