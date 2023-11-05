@@ -25,30 +25,6 @@ $(document).ready(function() {
     $('.amenities h4').text(Object.values(amenity_check).join(', '));
   });
 });
-    const callout = function () {
-    $.ajax({
-      type: 'get',
-      url: `http://${window.location.hostname}:5001/api/v1/status/`,
-      timeout: 5000,
-      success: function (status) {
-        if (status.status === 'OK') {
-          $('DIV#api_status').addClass('available');
-        } else {
-          $('DIV#api_status').removeClass('available');
-        }
-      },
-      error: function () {
-        $('DIV#api_status').removeClass('available');
-      },
-      complete: function () {
-        setTimeout(callout, 10000);
-      }
-    });
-  };
-  callout();
-  /*
-    Retrieve all places and create a articule tag with them
-  */
   const getPlaces = function () {
     $.ajax({
       type: 'POST',
